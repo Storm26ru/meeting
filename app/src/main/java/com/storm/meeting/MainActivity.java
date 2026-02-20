@@ -6,6 +6,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        Log.d("MainActivity","onCreate");
 
     }
     private void setInitialDate(){
@@ -108,4 +110,34 @@ public class MainActivity extends AppCompatActivity {
             setInitialTime();
         }
     };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("MainActivity","onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MainActivity","onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MainActivity","onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("MainActivity","onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("MainActivity","onDestroy");
+    }
 }
